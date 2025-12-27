@@ -1,4 +1,4 @@
-# Image-to-Vector-Converter
+# Image-Converter
 Conversor modular de imágenes a SVG optimizado y PNG para impresión DTF.  
 Soporta PNG, JPG, AI y PDF con extracción automática de imágenes y eliminación inteligente de fondo.
 
@@ -37,7 +37,7 @@ pip install scour
 ## Estructura del proyecto
 
 ```text
-Image-to-Vector-Converter/
+Image-Converter/
 │
 ├── convert_to_svg.py        # Módulo principal: raster/AI/PDF → SVG
 ├── svg_to_png.py            # Módulo DTF: SVG → PNG 600 DPI
