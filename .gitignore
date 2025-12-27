@@ -1,7 +1,7 @@
 # --- Carpetas del proyecto ---
-input/
-output/
-temp/
+input/*
+output/*
+temp/*
 
 # --- Entornos virtuales ---
 venv/
