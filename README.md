@@ -36,6 +36,7 @@ pip install scour
 
 ## Estructura del proyecto
 
+```text
 Image-to-Vector-Converter/
 │
 ├── convert_to_svg.py        # Módulo principal: raster/AI/PDF → SVG
@@ -46,6 +47,7 @@ Image-to-Vector-Converter/
 ├── temp/                    # Archivos temporales (IGNORADO por Git)
 │
 └── README.md
+```
 
 ---
 
