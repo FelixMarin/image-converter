@@ -169,3 +169,35 @@ Proyecto desarrollado por Félix, optimizado para flujos NBES de producción rea
 ## Estado
 
 Estable y listo para producción.
+
+---
+
+## Uso con Docker
+
+- **Construir la imagen:**
+
+```bash
+docker build -t image-converter:latest .
+```
+
+- **Ejecutar (montando carpetas `input` y `output`):**
+
+```bash
+docker run --rm -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" image-converter:latest
+```
+
+También incluimos scripts en la raíz del repositorio para facilitar el uso:
+
+- `docker_build.sh`: construye la imagen (`image-converter:latest`).
+- `docker_run_convert.sh`: ejecuta `convert_to_svg` dentro del contenedor pasando cualquier argumento.
+- `docker_run_svg_to_png.sh`: ejecuta `svg_to_png` dentro del contenedor pasando cualquier argumento.
+
+Ejemplos:
+
+```bash
+./docker_build.sh
+./docker_run_convert.sh -i input/foto.png -o output/foto -b true
+./docker_run_svg_to_png.sh -i output/foto_sf.svg -o dtf -d 600
+```
+
+Si prefiere ejecutar los binarios `inkscape` o `pdfimages` en la imagen, ya se han añadido `inkscape` y `poppler-utils` al `Dockerfile`.
